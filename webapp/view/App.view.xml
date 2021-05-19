@@ -7,7 +7,7 @@
 	<Shell id="shell">
 		<App id="app">
 			<pages>
-				<Page id="page" title="AAdi">
+				<Page id="page" title="{i18n>title}">
 					<content />
 				</Page>
 			</pages>
