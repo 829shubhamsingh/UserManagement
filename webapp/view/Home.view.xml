@@ -1,0 +1,60 @@
+<mvc:View
+    controllerName="com.personal.usermanagement.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns:m="sap.m"
+    xmlns="sap.ui.table"
+>
+	<m:Page id="page" title="{i18n>title}" titleAlignment="Center">
+		<m:content>
+        <Table
+				rows="{/results}"
+				ariaLabelledBy="title"
+                selectionMode="None">
+				<extension>
+					<m:OverflowToolbar style="Clear">
+						<m:Title id="title" text=""/>
+                        <m:ToolbarSpacer/>
+                        <m:Text text="Count ({/count})"/>
+					</m:OverflowToolbar>
+				</extension>
+				<columns>
+					<Column >
+						<m:Label text="Employee ID" />
+						<template>
+							<m:Text text="{empid}" wrapping="false" />
+						</template>
+					</Column>
+                    <Column >
+						<m:Label text="Employee Name" />
+						<template>
+							<m:Text text="{empname}" wrapping="false" />
+						</template>
+					</Column>
+                    <Column >
+						<m:Label text="Shift Time" />
+						<template>
+							<m:Text text="{path:'shift',formatter:'.formatter.shiftFormatter'}" wrapping="false" />
+						</template>
+					</Column>
+                    <Column >
+						<m:Label text="Status" />
+						<template>
+							<m:Text text="{status}" wrapping="false" />
+						</template>
+					</Column>
+                    <Column >
+						<m:Label text="Action" />
+						<template>
+                        <m:HBox>
+							<m:Button text="Edit Details"/>
+                            <m:Button text="Manage Shift"/>
+                        </m:HBox>
+						</template>
+					</Column>
+				</columns>
+		    </Table>
+        </m:content>
+	</m:Page>
+
+</mvc:View>

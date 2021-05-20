@@ -77,8 +77,13 @@
       "routes": [
         {
           "name": "RouteApp",
-          "pattern": "RouteApp",
-          "target": ["TargetApp"]
+          "pattern": "",
+          "target": ["HomeView"]
+        },
+        {
+          "name": "RouteHome",
+          "pattern": "Home",
+          "target": ["HomeView"]
         }
       ],
       "targets": {
@@ -88,6 +93,11 @@
           "clearControlAggregation": false,
           "viewId": "App",
           "viewName": "App"
+        },
+        "HomeView":{
+          "viewType": "XML",
+          "viewName":"Home",
+          "transition": "slide"
         }
       }
     }
