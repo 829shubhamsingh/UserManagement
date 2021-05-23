@@ -46,10 +46,17 @@
                     <Column >
 						<m:Label text="Action" />
 						<template>
-                        <m:HBox>
-							<m:Button text="Edit Details"/>
-                            <m:Button text="Manage Shift"/>
-                        </m:HBox>
+							<!--<m:Button text="Edit Details" press="onHandleEditDetails"/>
+                            <m:Button text="Manage Shift"/>-->
+                            <m:MenuButton text="Edit Details">
+			                <m:menu>
+				                <m:Menu>
+					                <m:MenuItem text="Edit" icon="sap-icon://edit" press="onHandleEditDetails"/>
+					                <m:MenuItem text="Manage Shift" icon="sap-icon://open-folder" press="onPress" />
+				                </m:Menu>
+			                </m:menu>
+		                    </m:MenuButton>
+                        
 						</template>
 					</Column>
 				</columns>

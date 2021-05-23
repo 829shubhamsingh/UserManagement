@@ -5,31 +5,51 @@
             "empid":1000111,
             "empname":"Vikas Singh",
             "shift":"1",
-            "status":"P"
+            "status":"P",
+            "email":"vs@nomail.com",
+            "wphone":"9999999999",
+            "hphone":"9999999998",
+            "position":"Sr"
         },
         {
             "empid":1000112,
             "empname":"Sharon Alexander",
             "shift":"1",
-            "status":"P"
+            "status":"P",
+            "email":"sa@nomail.com",
+            "wphone":"8888888888",
+            "hphone":"8888888878",
+            "position":"Sr"
         },
         {
             "empid":1000113,
             "empname":"Raghav Ranjan",
             "shift":"2",
-            "status":"T"
+            "status":"T",
+            "email":"rr@nomail.com",
+            "wphone":"7777777777",
+            "hphone":"7777777778",
+            "position":"Sr"
         },
         {
             "empid":1000114,
             "empname":"Gaurav Katoch",
             "shift":"3",
-            "status":"P"
+            "status":"P",
+            "email":"gk@nomail.com",
+            "wphone":"6666666666",
+            "hphone":"6666666668",
+            "position":"Sr"
         },
         {
             "empid":1000115,
             "empname":"Archit Garg",
             "shift":"2",
-            "status":"T"
+            "status":"T",
+            "email":"ag@nomail.com",
+            "wphone":"5555555555",
+            "hphone":"5555555558",
+            "position":"Sr"
         }
     ]
 }

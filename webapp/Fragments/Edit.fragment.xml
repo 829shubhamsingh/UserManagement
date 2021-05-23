@@ -1,0 +1,48 @@
+<core:FragmentDefinition
+   xmlns="sap.m"
+   xmlns:core="sap.ui.core"
+   xmlns:f="sap.ui.layout.form" >
+   <Dialog
+      id="editDialog"
+      title="Edit Details">
+      <content>
+        <f:SimpleForm id="SimpleFormDisplay480_Trial"
+			editable="false"
+			layout="ResponsiveGridLayout"
+			title="Personal Detail (Emp No-{selEmp>/empid})"
+			labelSpanXL="4"
+			labelSpanL="4"
+			labelSpanM="4"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="0"
+			emptySpanL="0"
+			emptySpanM="0"
+			emptySpanS="0"
+			columnsXL="3"
+			columnsL="2"
+			columnsM="2"
+			singleContainerFullSize="false" >
+			<f:content>
+				<Label design='Bold' text="Name" />
+				<Input value="{selEmp>/empname}" />
+				<Label design='Bold' text="Email ID" />
+				<Input value="{selEmp>/email}" />
+				<Label design='Bold' text="Work-Phone" />
+				<Input value="{selEmp>/wphone}" />
+				<Label design='Bold' text="Home-Phone" />
+				<Input value="{selEmp>/hphone}" />
+				<Label design='Bold' text="Position" />
+				<Input value="{selEmp>/position}" />
+				<Label design='Bold' text="Status" />
+				<Input value="{selEmp>/status}" />
+			</f:content>
+		</f:SimpleForm>
+      
+      
+      </content>
+      <buttons>
+            <Button text="Close" press="onHandleCloseEditDialog"/>
+      </buttons>
+   </Dialog>
+</core:FragmentDefinition>
