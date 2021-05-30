@@ -7,6 +7,7 @@
 >
 	<m:Page id="page" title="{i18n>title}" titleAlignment="Center">
 		<m:content>
+        <m:HBox id="map_canvas" fitContainer="true" justifyContent="Center" alignItems="Center" />
         <Table
 				rows="{/results}"
 				ariaLabelledBy="title"

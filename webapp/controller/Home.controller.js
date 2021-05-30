@@ -16,6 +16,29 @@ sap.ui.define([
                 this.getView().setModel(localModel);
 
             },
+            onAfterRendering:function(){
+                this.geocoder = new google.maps.Geocoder();
+                window.mapOptions = {                          
+                    center: new google.maps.LatLng(23, 82.5),
+                    zoom: 8,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };                           
+                //This is basically for setting the initial position of the map, ie. Setting the coordinates, for the place by default
+
+                var map = new google.maps.Map(this.getView().byId("map_canvas").getDomRef(),mapOptions);
+                var infowindow = new google.maps.InfoWindow;
+                var geocoder = new google.maps.Geocoder();
+                var marker = new google.maps.Marker({
+                map: map,
+                });
+
+                google.maps.event.addListener(map, "click", function (e) {
+                var lolatitude = e.latLng.lat(); //calculates latitude of the point of click
+                var lolongitude = e.latLng.lng()//calculates longitude of the point of click
+                jQuery.sap.require("sap.m.MessageToast");
+                sap.m.MessageToast.show("Lat"+lolatitude+"\n Lng"+lolongitude);
+                });
+            },
             onHandleEditDetails:function(oEvent){
                 if (!this.oDefaultDialog){
                     this.oDefaultDialog=sap.ui.xmlfragment(this.getView().getId(),"com.personal.usermanagement.Fragments.Edit",this)
