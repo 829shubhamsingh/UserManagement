@@ -26,7 +26,7 @@ sap.ui.define([
                 localModel.setData(selData);
                 this.getView().setModel(localModel,'selEmp');
                 this.oDefaultDialog.open();
-            },
+            }, 
             onHandleCloseEditDialog:function(){
                 this.getView().byId('editDialog').close();
             }

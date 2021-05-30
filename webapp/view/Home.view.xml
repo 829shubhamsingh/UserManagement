@@ -38,7 +38,7 @@
 						</template>
 					</Column>
                     <Column >
-						<m:Label text="Status" />
+						<m:Label text="Status" /> 
 						<template>
 							<m:Text text="{status}" wrapping="false" />
 						</template>
